@@ -31,7 +31,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/account", accountRoutes);
 app.use("/api/transaction", transactionRoutes);
 // app.use("/api/loan", loanRoutes);
-app.options("*", cors());
 
 const PORT = process.env.PORT || 5000;
 
