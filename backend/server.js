@@ -29,4 +29,5 @@ app.use("/api/account", accountRoutes);
 app.use("/api/transaction", transactionRoutes);
 // app.use("/api/loan", loanRoutes);
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log("Server running on port 5000"));
