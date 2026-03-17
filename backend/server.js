@@ -16,18 +16,22 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: true,
     credentials: true,
   }),
 );
-
 app.use(express.json());
 app.use(cookieParser());
+
+app.get("/", (req, res) => {
+  res.send("API Running");
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/account", accountRoutes);
 app.use("/api/transaction", transactionRoutes);
 // app.use("/api/loan", loanRoutes);
+app.options("*", cors());
 
 const PORT = process.env.PORT || 5000;
 
