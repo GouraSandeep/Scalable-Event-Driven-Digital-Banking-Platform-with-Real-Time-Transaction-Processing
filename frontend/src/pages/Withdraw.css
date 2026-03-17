@@ -1,0 +1,23 @@
+/* RED BUTTON */
+.fintech-btn.danger{
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+/* RED DOT */
+.dot.filled.danger{
+  background:#ef4444;
+}
+
+/* RED CONFIRM */
+.fintech-keypad .confirm.danger{
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+/* RED SUCCESS TICK */
+.tick.danger{
+  border-color:#ef4444;
+}
+
+.tick.danger:after{
+  border-color:#ef4444;
+}

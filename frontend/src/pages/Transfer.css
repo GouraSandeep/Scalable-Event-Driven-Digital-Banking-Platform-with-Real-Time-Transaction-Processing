@@ -1,0 +1,25 @@
+.fintech-input{
+  display:flex;
+  align-items:center;
+  background:rgba(255,255,255,.06);
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:20px;
+}
+
+.fintech-input.big input{
+  font-size:15px;
+}
+
+.fintech-input i{
+  margin-right:10px;
+  color:#38bdf8;
+}
+
+.fintech-input input{
+  flex:1;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:white;
+}

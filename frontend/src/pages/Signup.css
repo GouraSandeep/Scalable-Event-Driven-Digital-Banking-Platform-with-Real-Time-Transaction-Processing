@@ -1,0 +1,140 @@
+.fintech-signup-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+/* NAVBAR */
+.fintech-navbar {
+  padding: 18px 40px;
+}
+
+.fintech-logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.fintech-logo i {
+  margin-right: 8px;
+  color: #38bdf8;
+}
+
+/* WRAPPER */
+.fintech-signup-wrapper {
+  display: flex;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px;
+}
+
+/* LEFT SIDE */
+.fintech-left {
+  width: 420px;
+}
+
+.fintech-left h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.fintech-left p {
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.fintech-features {
+  margin-top: 30px;
+}
+
+.fintech-features div {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fintech-features i {
+  color: #38bdf8;
+}
+
+/* CARD */
+.fintech-signup-card {
+  width: 380px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.fintech-signup-card h2 {
+  margin-bottom: 4px;
+}
+
+.fintech-sub {
+  opacity: 0.6;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* INPUT */
+.fintech-input {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 15px;
+}
+
+.fintech-input i {
+  margin-right: 10px;
+  opacity: 0.7;
+}
+
+.fintech-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+}
+
+.fintech-input.password span {
+  cursor: pointer;
+}
+
+/* BUTTON */
+.fintech-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fintech-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* LOGIN LINK */
+.fintech-login-link {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.fintech-login-link a {
+  color: #38bdf8;
+  text-decoration: none;
+}

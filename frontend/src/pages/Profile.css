@@ -1,0 +1,111 @@
+.fintech-profile-page{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f172a,#020617);
+  font-family:"Inter",sans-serif;
+  color:white;
+}
+
+/* NAVBAR */
+.fintech-navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+}
+
+.fintech-logo{
+  font-size:22px;
+  font-weight:700;
+}
+
+.fintech-logo i{
+  margin-right:8px;
+  color:#38bdf8;
+}
+
+.back-link{
+  color:#94a3b8;
+  text-decoration:none;
+}
+
+/* WRAPPER */
+.fintech-profile-wrapper{
+  height:85vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CARD */
+.fintech-profile-card{
+  width:420px;
+  padding:40px;
+  border-radius:22px;
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(18px);
+  box-shadow:0 10px 40px rgba(0,0,0,.6);
+}
+
+/* TOP */
+.profile-top{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.avatar{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#38bdf8,#6366f1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+}
+
+/* INFO */
+.profile-info .row{
+  display:flex;
+  justify-content:space-between;
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.profile-info span{
+  opacity:.7;
+}
+
+.cap{
+  text-transform:capitalize;
+}
+
+.balance{
+  font-weight:600;
+  color:#38bdf8;
+}
+
+/* ACTIONS */
+.profile-actions{
+  margin-top:25px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.fintech-btn{
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.fintech-btn.outline{
+  background:rgba(255,255,255,.05);
+  color:white;
+}
+
+.fintech-btn.danger{
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+}
