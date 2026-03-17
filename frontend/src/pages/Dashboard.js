@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/axios";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Dashboard.css";
 
 function Section({ title, children }) {
@@ -36,12 +36,6 @@ export default function Dashboard() {
 
     fetchAccount();
   }, []);
-
-  function ProtectedRoute({ children }) {
-    const token = document.cookie.includes("token");
-
-    return token ? children : <Navigate to="/login" />;
-  }
 
   return (
     <div className="fintech-dash">
