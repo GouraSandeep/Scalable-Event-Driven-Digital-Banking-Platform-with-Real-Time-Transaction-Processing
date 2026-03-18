@@ -7,6 +7,7 @@ export default function Withdraw() {
   const [mpin, setMpin] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const openPopup = () => {
     if (!amount) {
@@ -27,7 +28,11 @@ export default function Withdraw() {
   };
 
   const withdraw = async () => {
+    if (loading) return;
+
     try {
+      setLoading(true);
+
       const res = await api.post("/transaction/withdraw", {
         amount,
         mpin,
@@ -42,8 +47,10 @@ export default function Withdraw() {
         setShowPopup(false);
         setAmount("");
         setMpin("");
+        setLoading(false);
       }, 2000);
     } catch (err) {
+      setLoading(false);
       alert(err.response?.data?.message || "Withdraw failed");
     }
   };

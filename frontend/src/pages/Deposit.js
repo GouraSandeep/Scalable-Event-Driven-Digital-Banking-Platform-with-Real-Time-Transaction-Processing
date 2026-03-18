@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import api from "../api/axios";
 import "./Deposit.css";
+import { v4 as uuid } from "uuid";
 
 export default function Deposit() {
   const [amount, setAmount] = useState("");
   const [mpin, setMpin] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const openPopup = () => {
     if (!amount) {
@@ -27,7 +29,11 @@ export default function Deposit() {
   };
 
   const deposit = async () => {
+    if (loading) return;
+
     try {
+      setLoading(true);
+
       const res = await api.post("/transaction/deposit", {
         amount,
         mpin,
@@ -42,8 +48,10 @@ export default function Deposit() {
         setShowPopup(false);
         setAmount("");
         setMpin("");
+        setLoading(false);
       }, 2000);
     } catch (err) {
+      setLoading(false);
       alert(err.response?.data?.message || "Deposit failed");
     }
   };

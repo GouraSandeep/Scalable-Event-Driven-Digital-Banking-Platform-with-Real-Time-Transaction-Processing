@@ -6,9 +6,9 @@ export default function Transfer() {
   const [receiverAccount, setReceiver] = useState("");
   const [amount, setAmount] = useState("");
   const [mpin, setMpin] = useState("");
-
   const [showPopup, setShowPopup] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const openPopup = () => {
     if (!receiverAccount || !amount) {
@@ -30,7 +30,11 @@ export default function Transfer() {
   };
 
   const transfer = async () => {
+    if (loading) return;
+
     try {
+      setLoading(true);
+
       await api.post("/transaction/transfer", {
         receiverAccount,
         amount,
@@ -46,8 +50,10 @@ export default function Transfer() {
         setReceiver("");
         setAmount("");
         setMpin("");
+        setLoading(false);
       }, 2000);
     } catch (err) {
+      setLoading(false);
       console.error("Transfer error:", err.response?.data || err.message);
       alert(err.response?.data?.message || "Transfer failed");
     }
@@ -122,10 +128,10 @@ export default function Transfer() {
 
                   <button
                     className="confirm primary"
-                    disabled={mpin.length !== 4}
+                    disabled={mpin.length !== 4 || loading}
                     onClick={transfer}
                   >
-                    ✔
+                    {loading ? "Processing..." : "✔"}
                   </button>
                 </div>
 
