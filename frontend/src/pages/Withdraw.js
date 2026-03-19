@@ -33,7 +33,7 @@ export default function Withdraw() {
     try {
       setLoading(true);
 
-      const res = await api.post("/transaction/withdraw", {
+      await api.post("/transaction/withdraw", {
         amount,
         mpin,
       });

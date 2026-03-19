@@ -32,8 +32,7 @@ export default function Deposit() {
 
     try {
       setLoading(true);
-
-      const res = await api.post("/transaction/deposit", {
+      await api.post("/transaction/deposit", {
         amount,
         mpin,
       });
