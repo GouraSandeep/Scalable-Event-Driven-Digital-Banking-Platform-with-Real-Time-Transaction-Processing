@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import api from "../api/axios";
 import "./Deposit.css";
-import { v4 as uuid } from "uuid";
 
 export default function Deposit() {
   const [amount, setAmount] = useState("");
@@ -38,8 +37,6 @@ export default function Deposit() {
         amount,
         mpin,
       });
-
-      console.log(res.data);
 
       setSuccess(true);
 

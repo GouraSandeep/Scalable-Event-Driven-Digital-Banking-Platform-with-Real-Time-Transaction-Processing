@@ -38,8 +38,6 @@ export default function Withdraw() {
         mpin,
       });
 
-      console.log("Withdraw success:", res.data);
-
       setSuccess(true);
 
       setTimeout(() => {
