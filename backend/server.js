@@ -7,6 +7,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import accountRoutes from "./routes/accountRoutes.js";
 import transactionRoutes from "./routes/transactionRoutes.js";
+import "./workers/transactionWorker.js";
 // import loanRoutes from "./routes/loanRoutes.js";
 
 dotenv.config();
